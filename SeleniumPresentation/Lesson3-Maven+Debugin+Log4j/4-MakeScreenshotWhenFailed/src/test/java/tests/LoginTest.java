@@ -1,0 +1,32 @@
+package tests;
+
+import framework.LoginPage;
+import framework.UserFeedPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+
+public class LoginTest extends TestBase {
+	
+	@Test
+	public void verifyLoginWithCorrectCredentials() {
+		LoginPage loginPage = new LoginPage(driver);
+		
+		loginPage.open();
+		loginPage.login("kholodniy.cpd1@gmail.com", "Partyword1");
+
+		Assert.assertTrue((new UserFeedPage(driver)).isFeedDisplayed(), "[ERROR] Feed not found.");
+	}
+
+	@Test
+	public void verifyLoginWithIncorrectCredentials() {
+		LoginPage loginPage = new LoginPage(driver);
+		
+		loginPage.open();
+		loginPage.login("kholodniy.cpd@gmail.com", "RandomPassword");
+
+		Assert.assertFalse((new UserFeedPage(driver)).isFeedDisplayed(), "[ERROR] Feed was displayed");
+		
+		
+	}
+}
