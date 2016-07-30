@@ -27,5 +27,7 @@ public class LoginTest extends TestBase{
 		loginPage.login("kholodniy.cpd@gmail.com", "RandomPassword");
 
 		Assert.assertFalse((new UserFeedPage(driver)).isFeedDisplayed(), "[ERROR] Feed not found.");
+		
+		
 	}
 }

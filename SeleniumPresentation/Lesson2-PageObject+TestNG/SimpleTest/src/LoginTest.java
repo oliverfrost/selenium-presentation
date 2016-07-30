@@ -6,6 +6,7 @@ public class LoginTest {
 
 	public static void main(String[] args) {
 		WebDriver driver = new FirefoxDriver();
+		
 		driver.get("https://www.facebook.com/");
 		driver.findElement(By.id("email")).sendKeys("kholodniy.cpd@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("Partyword1");

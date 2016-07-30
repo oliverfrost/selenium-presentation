@@ -2,42 +2,50 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17167" started-at="2016-07-20T08:35:34Z" finished-at="2016-07-20T08:35:51Z">
+  <suite name="Default suite" duration-ms="26502" started-at="2016-07-24T09:54:11Z" finished-at="2016-07-24T09:54:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17167" started-at="2016-07-20T08:35:34Z" finished-at="2016-07-20T08:35:51Z">
+    <test name="Default test" duration-ms="26502" started-at="2016-07-24T09:54:11Z" finished-at="2016-07-24T09:54:37Z">
       <class name="LoginTestWithFixtures">
-        <test-method status="PASS" signature="startUp()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="startUp" is-config="true" duration-ms="4319" started-at="2016-07-20T11:35:34Z" finished-at="2016-07-20T11:35:38Z">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="startUp" is-config="true" duration-ms="5817" started-at="2016-07-24T12:54:11Z" finished-at="2016-07-24T12:54:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startUp -->
-        <test-method status="PASS" signature="verifyLoginWithCorrectCredentials()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="verifyLoginWithCorrectCredentials" duration-ms="9148" started-at="2016-07-20T11:35:38Z" finished-at="2016-07-20T11:35:47Z">
+        <test-method status="PASS" signature="verifyLoginWithCorrectCredentials()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="verifyLoginWithCorrectCredentials" duration-ms="9768" started-at="2016-07-24T12:54:17Z" finished-at="2016-07-24T12:54:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithCorrectCredentials -->
-        <test-method status="FAIL" signature="verifyLoginWithIncorrectCredentials()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="verifyLoginWithIncorrectCredentials" duration-ms="2873" started-at="2016-07-20T11:35:47Z" finished-at="2016-07-20T11:35:50Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="tearDown" is-config="true" duration-ms="1179" started-at="2016-07-24T12:54:26Z" finished-at="2016-07-24T12:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="startUp()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="startUp" is-config="true" duration-ms="4440" started-at="2016-07-24T12:54:28Z" finished-at="2016-07-24T12:54:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="FAIL" signature="verifyLoginWithIncorrectCredentials()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="verifyLoginWithIncorrectCredentials" duration-ms="4473" started-at="2016-07-24T12:54:32Z" finished-at="2016-07-24T12:54:36Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"email"}
-Command duration or timeout: 323 milliseconds
+              <![CDATA[Unable to locate element: {"method":"id","selector":"contentCol"}
+Command duration or timeout: 23 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d4f13a9a-8e32-4358-ae99-d15fbeed6421
-*** Element info: {Using=id, value=email}]]>
+Session ID: 0444f0f4-b864-4a45-b060-068ad54e9a4d
+*** Element info: {Using=id, value=contentCol}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
-Command duration or timeout: 323 milliseconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"contentCol"}
+Command duration or timeout: 23 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d4f13a9a-8e32-4358-ae99-d15fbeed6421
-*** Element info: {Using=id, value=email}
+Session ID: 0444f0f4-b864-4a45-b060-068ad54e9a4d
+*** Element info: {Using=id, value=contentCol}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -49,7 +57,7 @@ Session ID: d4f13a9a-8e32-4358-ae99-d15fbeed6421
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
 	at org.openqa.selenium.By$ById.findElement(By.java:218)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at LoginTestWithFixtures.verifyLoginWithIncorrectCredentials(LoginTestWithFixtures.java:36)
+	at LoginTestWithFixtures.verifyLoginWithIncorrectCredentials(LoginTestWithFixtures.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -74,23 +82,23 @@ Session ID: d4f13a9a-8e32-4358-ae99-d15fbeed6421
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"contentCol"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous1457810921688120474webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/User/AppData/Local/Temp/anonymous1457810921688120474webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/User/AppData/Local/Temp/anonymous1457810921688120474webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous1457810921688120474webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/User/AppData/Local/Temp/anonymous1457810921688120474webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous762673532527851447webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/User/AppData/Local/Temp/anonymous762673532527851447webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/User/AppData/Local/Temp/anonymous762673532527851447webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous762673532527851447webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/User/AppData/Local/Temp/anonymous762673532527851447webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithIncorrectCredentials -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="tearDown" is-config="true" duration-ms="795" started-at="2016-07-20T11:35:50Z" finished-at="2016-07-20T11:35:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:LoginTestWithFixtures@66d2e7d9]" name="tearDown" is-config="true" duration-ms="780" started-at="2016-07-24T12:54:36Z" finished-at="2016-07-24T12:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

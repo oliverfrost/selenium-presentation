@@ -2,37 +2,37 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22833" started-at="2016-07-20T08:17:50Z" finished-at="2016-07-20T08:18:13Z">
+  <suite name="Default suite" duration-ms="24726" started-at="2016-07-24T09:48:48Z" finished-at="2016-07-24T09:49:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22833" started-at="2016-07-20T08:17:50Z" finished-at="2016-07-20T08:18:13Z">
+    <test name="Default test" duration-ms="24726" started-at="2016-07-24T09:48:48Z" finished-at="2016-07-24T09:49:13Z">
       <class name="LoginTestWithRunner">
-        <test-method status="PASS" signature="verifyLoginWithCorrectCredentials()[pri:0, instance:LoginTestWithRunner@5056dfcb]" name="verifyLoginWithCorrectCredentials" duration-ms="14678" started-at="2016-07-20T11:17:50Z" finished-at="2016-07-20T11:18:05Z">
+        <test-method status="PASS" signature="verifyLoginWithCorrectCredentials()[pri:0, instance:LoginTestWithRunner@5056dfcb]" name="verifyLoginWithCorrectCredentials" duration-ms="15770" started-at="2016-07-24T12:48:48Z" finished-at="2016-07-24T12:49:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithCorrectCredentials -->
-        <test-method status="FAIL" signature="verifyLoginWithIncorrectCredentials()[pri:0, instance:LoginTestWithRunner@5056dfcb]" name="verifyLoginWithIncorrectCredentials" duration-ms="8099" started-at="2016-07-20T11:18:05Z" finished-at="2016-07-20T11:18:13Z">
+        <test-method status="FAIL" signature="verifyLoginWithIncorrectCredentials()[pri:0, instance:LoginTestWithRunner@5056dfcb]" name="verifyLoginWithIncorrectCredentials" duration-ms="8884" started-at="2016-07-24T12:49:04Z" finished-at="2016-07-24T12:49:12Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Unable to locate element: {"method":"id","selector":"contentCol"}
-Command duration or timeout: 20 milliseconds
+Command duration or timeout: 16 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: bb781395-e27a-4122-a69a-57abd5c443cb
+Session ID: d153fd40-8aa7-4d8c-9a51-0342a0a1cb12
 *** Element info: {Using=id, value=contentCol}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"contentCol"}
-Command duration or timeout: 20 milliseconds
+Command duration or timeout: 16 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: bb781395-e27a-4122-a69a-57abd5c443cb
+Session ID: d153fd40-8aa7-4d8c-9a51-0342a0a1cb12
 *** Element info: {Using=id, value=contentCol}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -73,13 +73,13 @@ Session ID: bb781395-e27a-4122-a69a-57abd5c443cb
 Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"contentCol"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'ofpcwin', ip: '172.29.108.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+System info: host: 'ofpcwin', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous8816540822165522205webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/User/AppData/Local/Temp/anonymous8816540822165522205webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/User/AppData/Local/Temp/anonymous8816540822165522205webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous8816540822165522205webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/User/AppData/Local/Temp/anonymous8816540822165522205webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous508120794262797012webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/User/AppData/Local/Temp/anonymous508120794262797012webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/User/AppData/Local/Temp/anonymous508120794262797012webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/User/AppData/Local/Temp/anonymous508120794262797012webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/User/AppData/Local/Temp/anonymous508120794262797012webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
