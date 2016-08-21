@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +31,12 @@ public class HomePage extends BasePage {
     @FindBys(@FindBy(className = "taskItem-body"))
     private List<WebElement> tasks;
 
+    @FindBy(css = "button.confirm")
+    private WebElement confirmRemovalButton;
+
+//    @FindBy(className = "ContextMenu")
+//    private ContextMenu menu;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -40,13 +47,11 @@ public class HomePage extends BasePage {
         return avatar.isDisplayed() && hamburgerIcon.isDisplayed();
     }
 
-
     public void addNewTask(String taskName) {
         logger.info("Adding new task: {}", taskName);
         type(newTaskInput, taskName);
         newTaskInput.sendKeys(Keys.RETURN);
     }
-
 
     public boolean isTaskPresent(String taskName) {
         boolean present = false;
@@ -60,5 +65,44 @@ public class HomePage extends BasePage {
             }
         }
         return present;
+    }
+
+
+    public void markTaskAsCompleted(String taskName) {
+        boolean present = false;
+        for (WebElement task : tasks) {
+            String name = task.getText();
+            if (name.equals(taskName)) {
+                task.findElement(By.className("taskItem-checkboxWrapper")).click();
+                simpleWait(1000);
+                present = true;
+                break;
+            }
+        }
+
+        if (!present) {
+            logger.warn("Task {} was not found and not marked as completed.", taskName);
+        }
+    }
+
+
+    public void removeTask(String taskName) {
+        boolean present = false;
+        for (WebElement task : tasks) {
+            String name = task.getText();
+            if (name.equals(taskName)) {
+                System.out.println("TASK FOUND");
+                rightClick(task);
+                rightClick(task);
+                //menu.remove();
+                driver.findElement(By.className("trash")).click();
+                confirmRemovalButton.click();
+                break;
+            }
+        }
+
+        if (!present) {
+            logger.warn("Task {} was not found and not removed.", taskName);
+        }
     }
 }

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Run only one test class" verbose="1" >
+    <test name="Login Test">
+        <classes>
+            <class name="LoginTest" />
+        </classes>
+    </test>
+</suite><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Run only one test class" verbose="1" >
+<test name="Login Test">
+    <classes>
+        <class name="LoginTest" />
+    </classes>
+</test>
+</suite>

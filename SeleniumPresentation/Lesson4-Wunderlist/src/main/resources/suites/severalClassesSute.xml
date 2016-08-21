@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Run two files" verbose="2">
+    <!-- https://www.mkyong.com/unittest/testng-tutorial-5-suite-test/ -->
+    <!-- http://seleniumone-by-arun.blogspot.com/2013/05/158-understanding-usage-of-verbose.html -->
+
+    <test name="Login and Tasks Creation">
+        <classes>
+            <class name="LoginTest"/>
+            <class name="TasksTest"/>
+        </classes>
+    </test>
+
+</suite>

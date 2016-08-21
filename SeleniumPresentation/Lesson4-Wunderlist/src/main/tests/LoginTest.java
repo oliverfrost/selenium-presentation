@@ -2,6 +2,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
 
@@ -10,7 +11,7 @@ public class LoginTest extends TestBase {
     HomePage homePage;
 
     @BeforeMethod
-    public void goToLoginPage(){
+    public void goToLoginPage() {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
 
@@ -19,21 +20,21 @@ public class LoginTest extends TestBase {
     }
 
 
-    @Test(groups = {"smoke", "positive"})
-    public void loginWithCorrectCredentialsTest(){
-        loginPage.login(user);
+    @Test(groups = {"smoke", "positive, regression"})
+    public void loginWithCorrectCredentialsTest() {
+        loginPage.login(USER);
         assertTrue(homePage.isOpened());
     }
 
-    @Test(groups = {"negative"})
-    public void loginWithIncorrectPasswordTest(){
-        loginPage.login(user.getEmail(), "Incorrect Password");
+    @Test(groups = {"negative, regression"})
+    public void loginWithIncorrectPasswordTest() {
+        loginPage.login(USER.getEmail(), "Incorrect Password");
         assertTrue(loginPage.isIncorrectPasswordMessageDisplayed());
     }
 
-    @Test(groups = {"negative"})
-    public void loginWithIncorrectEmailTest(){
-        loginPage.login("Incorrect Email", user.getPassword());
+    @Test(groups = {"negative, regression"})
+    public void loginWithIncorrectEmailTest() {
+        loginPage.login("Incorrect Email", USER.getPassword());
         assertFalse(loginPage.isIncorrectPasswordMessageDisplayed());
     }
 }

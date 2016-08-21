@@ -9,7 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     public static WebDriver driver;
     protected Properties properties;
-    protected User user = new User();
+    public static User USER = new User();
 
     @BeforeSuite
     public void startUp() {
@@ -77,9 +79,9 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
     }
 
-    private void initializeUser(){
-        user.setEmail(properties.getProperty("userEmail"));
-        user.setPassword(properties.getProperty("userPassword"));
-        user.setName(properties.getProperty("userName"));
+    private void initializeUser() {
+        USER.setEmail(properties.getProperty("userEmail"));
+        USER.setPassword(properties.getProperty("userPassword"));
+        USER.setName(properties.getProperty("userName"));
     }
 }
