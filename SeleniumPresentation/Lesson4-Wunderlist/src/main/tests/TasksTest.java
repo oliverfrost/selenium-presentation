@@ -1,6 +1,7 @@
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -26,7 +27,7 @@ public class TasksTest extends TestBase {
     public void createNewTask(String taskName) {
         homePage.addNewTask(taskName);
 
-        assertTrue(homePage.isTaskPresent(taskName));
+        assertTrue(homePage.isTaskPresent(taskName), "[ERROR] Task not present: " + taskName);
     }
 
     @Test(dependsOnMethods = {"createNewTask"}, groups = {"smoke", "positive, regression"})
@@ -34,7 +35,7 @@ public class TasksTest extends TestBase {
         String taskName = "Call Molly";
         homePage.markTaskAsCompleted(taskName);
 
-        assertFalse(homePage.isTaskPresent(taskName));
+        assertFalse(homePage.isTaskPresent(taskName), "[ERROR] Task shound not be present: " + taskName);
     }
 
     @Test(dependsOnMethods = {"createNewTask"}, groups = {"smoke", "positive, regression"})
@@ -42,8 +43,18 @@ public class TasksTest extends TestBase {
         String taskName = "Buy some milk";
         homePage.removeTask(taskName);
 
-        assertFalse(homePage.isTaskPresent(taskName));
+        assertFalse(homePage.isTaskPresent(taskName), "[ERROR] Task shound not be present: " + taskName);
     }
+
+    @Test
+    public void softAssertExample() {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(false, "[ERROR] Noo-o-o-o-o!");
+        softAssert.assertEquals(1, 2, "[ERROR] But how?");
+        softAssert.assertAll();
+    }
+
+
 
 
     @DataProvider(name = "randomTaskName")

@@ -23,18 +23,18 @@ public class LoginTest extends TestBase {
     @Test(groups = {"smoke", "positive, regression"})
     public void loginWithCorrectCredentialsTest() {
         loginPage.login(USER);
-        assertTrue(homePage.isOpened());
+        assertTrue(homePage.isOpened(), "[ERROR] Home page was not opened.");
     }
 
     @Test(groups = {"negative, regression"})
     public void loginWithIncorrectPasswordTest() {
         loginPage.login(USER.getEmail(), "Incorrect Password");
-        assertTrue(loginPage.isIncorrectPasswordMessageDisplayed());
+        assertTrue(loginPage.isIncorrectPasswordMessageDisplayed(), "[ERROR] Incorrect Email Message was not displayed.");
     }
 
     @Test(groups = {"negative, regression"})
     public void loginWithIncorrectEmailTest() {
         loginPage.login("Incorrect Email", USER.getPassword());
-        assertFalse(loginPage.isIncorrectPasswordMessageDisplayed());
+        assertFalse(loginPage.isIncorrectPasswordMessageDisplayed(), "[ERROR] Incorrect Email Message should not be displayed.");
     }
 }
